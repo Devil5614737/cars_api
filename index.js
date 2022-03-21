@@ -18,8 +18,8 @@ dotenv.config({path:"./.env"})
 app.use('/cars',cars);
 
 
-const port=process.env.PORT||5000;
 
 
-app.listen(4000,()=>console.log(`Listening on port ${port}`))
+
+app.listen(4000,()=>console.log("Listening on port 4000"))
 
