@@ -380,14 +380,14 @@ const premiumImages=[
 
 
 router.get("/",(req,res)=>{
-    res.status(200).json("welcome to cars api")
+    res.send("welcome to cars api")
 })
 router.get("/cars",(req,res)=>{
-    res.status(200).json(cars)
+    res.send(cars)
 })
 
 router.get("/premium",(req,res)=>{
-    res.status(200).json(premiumImages)
+    res.send(premiumImages)
 })
 
 
