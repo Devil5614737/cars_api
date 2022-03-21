@@ -1,25 +1,12 @@
+const express = require("express");
+const cors = require("cors");
+const app = express();
+const cars = require("./routes/cars");
 
-const express=require("express")
-const cors=require('cors')
-const app=express();
-const cars=require("./routes/cars")
-
-app.use(express.json())
-app.use(cors())
-
+app.use(express.json());
+app.use(cors());
 
 
+app.use("/", cars);
 
-
-
-
-
-
-app.use('/cars',cars);
-
-
-
-
-
-app.listen(5000,()=>console.log("Listening on port 5000"))
-
+app.listen(5000, () => console.log("Listening on port 5000"));
